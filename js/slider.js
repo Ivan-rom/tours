@@ -4,23 +4,14 @@ const slider = document.querySelector(".slider__list");
 const slides = slider.childElementCount;
 let currentSlide = 1;
 
-const move = () => slider.style.transform = `translateX(${(currentSlide - 1) * -100}vw)`;
-
-const moveRight = () => {
-    currentSlide < slides ? currentSlide++ : currentSlide = 1;
-    move();
+const move = index => {
+    index > 0 ? currentSlide < slides ? currentSlide++ : currentSlide = 1 : currentSlide > 1 ? currentSlide-- : currentSlide = slides;
+    slider.style.transform = `translateX(${(currentSlide - 1) * -100}vw)`;
 }
 
-const moveLeft = () => {
-    currentSlide > 1 ? currentSlide-- : currentSlide = slides;
-    move();
-}
-
-buttonLeft.addEventListener("click", () => {
-});
-
-buttonRight.addEventListener("click", () => moveRight());
+buttonLeft.addEventListener("click", () => move(-1));
+buttonRight.addEventListener("click", () => move(1));
 
 setInterval(() => {
-    moveRight();
+    move(1);
 }, 4000);
