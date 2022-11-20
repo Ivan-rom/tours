@@ -228,6 +228,8 @@ header .navbar .links .link:hover::after {
 }
 .tours__text .description {
   font-size: 20px;
+  height: 72px;
+  overflow: hidden;
 }
 .tours__text .link {
   font-size: 18px;
