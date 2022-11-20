@@ -1,0 +1,64 @@
+.slider
+    margin-top: 0
+    position: relative
+    height: 100vh
+    &__window
+        height: 100%
+        overflow: hidden
+    &__list
+        height: 100%
+        display: flex
+        transform: translateX(0)
+        transition: transform .5s ease-in-out
+    &__item
+        flex-basis: 100vw
+        flex-shrink: 0
+        background-repeat: no-repeat
+        max-height: 100%
+        background-size: cover
+        background-position: center
+        text-align: right
+        .container
+            top: 50%
+            position: relative
+            transform: translateY(-50%)
+            .title
+                font-size: 70px
+            .description
+                font-size: 24px
+    &__content
+        padding: 15px
+        margin-left: auto
+        max-width: 50%
+        width: auto
+        margin-right: 40px
+        background-color: #9acd329c
+        border-radius: 15px
+    &__button
+        position: absolute
+        height: 35px
+        width: 35px
+        top: 50%
+        transform: translateY(-50%)
+        border-radius: 50%
+        border: none
+        background-color: #ffffff
+        &::before
+            content: ""
+            position: absolute
+            width: 10px
+            height: 10px
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) rotate(-45deg)
+            border: 3px solid yellowgreen
+    &__left
+        left: 20px
+        &::before
+            border-right: none
+            border-bottom: none
+    &__right
+        right: 20px
+        &::before
+            border-top: none
+            border-left: none

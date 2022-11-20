@@ -1,0 +1,38 @@
+.tours
+    &__list
+        display: flex
+        justify-content: space-evenly
+        flex-wrap: wrap
+        gap: 15px
+        position: relative
+    &__item
+        border-radius: 10px
+        overflow: hidden
+        max-width: 300px
+        img
+            transition: transform .3s
+        &:hover
+            img
+                transform: scale(1.1)
+        &.active
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            z-index: 999
+            max-width: 400px
+    &__image
+        max-height: 150px
+        overflow: hidden
+    &__text
+        background-color: yellowgreen
+        padding: 10px
+        .title
+            font-size: 32px
+        .price
+            display: none
+        .description
+            font-size: 20px
+        .link
+            font-size: 18px
+            color: tomato

@@ -1,0 +1,27 @@
+header
+    background-color: yellowgreen
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+    z-index: 999
+    .navbar
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 30px
+        height: 50px
+        .links
+            display: flex
+            gap: 20px
+            font-size: 18px
+            .link
+                &::after
+                    content: ""
+                    display: block
+                    width: 0
+                    border-top: 2px solid white
+                    transition: .3s
+                &:hover::after
+                    width: 100%

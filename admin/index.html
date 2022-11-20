@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>Tours Admin</title>
+</head>
+<body>
+    <aside>
+        <button class="tours-btn btn" id="tours">Туры</button>
+        <button class="slider-btn btn" id="slider">Слайдер</button>
+        <button class="requests-btn btn" id="requests">Заявки</button>
+    </aside>
+    <div class="content">
+        <section class="tours-body">
+            <h2 class="section-title">
+                Добавить тур
+            </h2>
+            <form action="#" method="post" class="tours-form">
+                <label>
+                    Название:
+                    <input type="text" name="title">
+                </label>
+                <label>
+                    Описание:
+                    <textarea name="description"></textarea>
+                </label>
+                <label>
+                    Цена <span>руб.</span>:
+                    <input type="number" name="price">
+                </label>
+                <label>
+                    Выберите изображение:
+                    <input type="file" name="image">
+                </label>
+                <input type="submit" class="submit" value="Добавить">
+            </form>
+            <table border="1">
+                <thead>Все туры:</thead>
+                <tr>
+                    <th class="title">Название</th>
+                    <th class="description">Описание</th>
+                    <th class="image">Изображение</th>
+                    <th class="price">Цена</th>
+                    <th class="delete">Удалить</th>
+                </tr>
+                <tr>
+                    <td class="title">Египет прекрасный тур прям класс!</td>
+                    <td class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, amet.</td>
+                    <td class="image"><img src="../images/tours/image-1.jpeg" alt=""></td>
+                    <td class="price">30000 руб.</td>
+                    <td class="delete"><a href="#">Удалить</a></td>
+                </tr>
+                <tr>
+                    <td class="title">Москва</td>
+                    <td class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, amet.</td>
+                    <td class="image"><img src="../images/tours/image-3.jpeg" alt=""></td>
+                    <td class="price">25000 руб.</td>
+                    <td class="delete"><a href="#">Удалить</a></td>
+                </tr>
+                <tr>
+                    <td class="title">Турция</td>
+                    <td class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, amet.</td>
+                    <td class="image"><img src="../images/tours/image-2.jpeg" alt=""></td>
+                    <td class="price">40000 руб.</td>
+                    <td class="delete"><a href="#">Удалить</a></td>
+                </tr>
+            </table>
+        </section>
+        <section class="slider-body" style="display: block;">
+            <h2>Туры в слайдере:</h2>
+            <form action="#" method="get">
+                <label>
+                    <input type="checkbox" name="slider-tours" id="tour-id-1">
+                    <h3>Поездка в Египет</h3>
+                    <img src="../images/tours/image-1.jpeg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maiores facilis quisquam nemo vitae quas magni odio? Sapiente, iste iure.</p>
+                    <p>Цена: <span>250000</span> руб.</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="slider-tours" id="tour-id-2">
+                    <h3>Поездка в Египет</h3>
+                    <img src="../images/tours/image-1.jpeg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ut.</p>
+                    <p>Цена: <span>25000</span> руб.</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="slider-tours" id="tour-id-3">
+                    <h3>Поездка в Египет</h3>
+                    <img src="../images/tours/image-1.jpeg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ut.</p>
+                    <p>Цена: <span>25000</span> руб.</p>
+                </label>
+                <input type="submit" name="slider-tours" value="Обновить" class="submit">
+            </form>
+        </section>
+        <section class="requests-body">requests</section>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>

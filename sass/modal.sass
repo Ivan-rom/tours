@@ -1,0 +1,42 @@
+.modal
+    background-color: #2b2b2b85
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 999
+    display: none
+    opacity: 0
+    &.active
+        display: block
+        opacity: 1
+    &__card
+        width: 1000px
+        height: auto
+        background-color: #fff
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        display: flex
+        border-radius: 10px
+        overflow: hidden
+        background-color: yellowgreen
+        color: white
+    &__image
+        flex-basis: 50%
+        flex-shrink: 0
+    &__text
+        padding: 10px 15px
+        .description
+            font-size: 18px
+        .head
+            display: flex
+            justify-content: space-between
+            align-items: baseline
+            .title
+                font-size: 28px
+                margin-bottom: 10px
+            .price
+                font-size: 20px
